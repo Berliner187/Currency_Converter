@@ -9,12 +9,12 @@ EUR = 'https://www.banki.ru/products/currency/eur/'
 UAH = 'https://www.banki.ru/products/currency/uah/'
 CNY = 'https://finance.rambler.ru/calculators/converter/1-CNY-RUB/'
 
-zahn = int(input('Число: '))
-print('Выберите цифрой')
-print('1 - Доллар, 2 - Евро, 3 - Гривна, 4 - Юань')
-change = str(input('\n''Валюта: '))
+zahn = int(input('Number: '))
+print('Select by number')
+print('1 - Dollar, 2 - Euro, 3 - Hryvnia, 4 - Yuan')
+change = str(input('\n''Currency: '))
 
-load_data = 'Загрузка данных...'
+load_data = 'Load data...'
 rub = "₽"
 exit_text = 'Press Enter: '
 
