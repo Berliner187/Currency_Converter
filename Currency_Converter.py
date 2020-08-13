@@ -8,10 +8,11 @@ USD = 'https://finance.rambler.ru/currencies/USD/?utm_medium=widget'
 EUR = 'https://www.banki.ru/products/currency/eur/'
 UAH = 'https://www.banki.ru/products/currency/uah/'
 CNY = 'https://finance.rambler.ru/calculators/converter/1-CNY-RUB/'
+GBP = 'https://finance.rambler.ru/calculators/converter/1-GBP-RUB/'
 
-zahn = int(input('Number: '))
-print('Select by number')
-print('1 - Dollar, 2 - Euro, 3 - Hryvnia, 4 - Yuan')
+zahn = int(input('\n''The number to be convert: '))
+print('\n''Select by number')
+print('1 - Dollar, 2 - Euro, 3 - Hryvnia, 4 - Yuan', '5 - Pound')
 change = str(input('\n''Currency: '))
 
 load_data = 'Load data...'
@@ -42,8 +43,8 @@ elif change == '3':
 	print('\n', load_data)
 	full_page = requests.get(UAH, headers=headers)
 	soup = BeautifulSoup(full_page.content, 'html.parser')
-	convert_eu = soup.findAll("div", {"class": "currency-table__large-text"})
-	uah = float(convert_eu[0].text.replace(",", "."))
+	convert = soup.findAll("div", {"class": "currency-table__large-text"})
+	uah = float(convert[0].text.replace(",", "."))
 	uah_out = uah * zahn / 10
 	print(uah_out, rub)
 	end = input(exit_text)
@@ -52,10 +53,20 @@ elif change == '4':
 	print('\n', load_data)
 	full_page = requests.get(CNY, headers=headers)
 	soup = BeautifulSoup(full_page.content, 'html.parser')
-	convert_eu = soup.findAll("div", {"class": "converter-display__value"})
-	cny = float(convert_eu[1].text)
+	convert = soup.findAll("div", {"class": "converter-display__value"})
+	cny = float(convert[1].text)
 	cny_out = cny * zahn 
 	print(cny_out, rub)
+	end = input(exit_text)
+
+elif change == '5':
+	print('\n', load_data)
+	full_page = requests.get(GBP, headers=headers)
+	soup = BeautifulSoup(full_page.content, 'html.parser')
+	convert = soup.findAll("div", {"class": "converter-display__value"})
+	gbp = float(convert[1].text)
+	gbp_out = gbp * zahn
+	print(gbp_out, rub)
 	end = input(exit_text)
 	
 else:
