@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import eel
 import requests
 from bs4 import BeautifulSoup
@@ -13,6 +14,8 @@ UAH = 'https://www.banki.ru/products/currency/uah/'
 CNY = 'https://finance.rambler.ru/calculators/converter/1-CNY-RUB/'
 GBP = 'https://finance.rambler.ru/calculators/converter/1-GBP-RUB/'
 AMD = 'https://finance.rambler.ru/calculators/converter/1-AMD-RUB/'
+CAD = 'https://www.banki.ru/products/currency/cad/'
+CHF = 'https://www.banki.ru/products/currency/chf/'
 
 
 @eel.expose
@@ -63,6 +66,24 @@ def check_ArmenianDram():
     convert = soup.findAll("div", {"class": "converter-display__value"})
     out = float(convert[1].text)
     return out
+
+@eel.expose
+def check_CanadianDollar():
+    full_page = requests.get(CAD, headers=headers)
+    soup = BeautifulSoup(full_page.content, 'html.parser')
+    convert_eu = soup.findAll("div", {"class": "currency-table__large-text"})
+    out = float(convert_eu[0].text.replace(",", "."))
+    return out
+
+@eel.expose
+def check_SwissFrank():
+    full_page = requests.get(CHF, headers=headers)
+    soup = BeautifulSoup(full_page.content, 'html.parser')
+    convert_eu = soup.findAll("div", {"class": "currency-table__large-text"})
+    out = float(convert_eu[0].text.replace(",", "."))
+    return out
+
+
 
 
 

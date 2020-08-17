@@ -10,21 +10,16 @@
 	font-family: 'SFNS Display'
 }
 body {
-background: #41295a;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-background-size: 1920px 1080px
+	background-color: #55595f;
+ 	background-size: 1920px 1080px
 }
 h1 {
 	font-family: 'Mon Amour One, Medium';
-	font-size: 4em;
+	font-size: 5em;
 	color: #FFF;
 	text-align: center;
-	background: #ff7e5f;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #feb47b, #ff7e5f);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #feb47b, #ff7e5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+	background-color: #ffcb3b;
+    background-image: linear-gradient(147deg, #ffcb3b 0%, #ff9e25 74%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -36,15 +31,24 @@ input[type="text"]::placeholder { color: #fafafa; opacity: .6}
 
 .main-block {
 	display: inline;
+	height: 100%;
+	width: 100%
 }
 
+.brd {
+	border: .3em double black; 
+    padding: 10px;
+    border-radius: 2em
+}
 .block-in-ruble {
-	width: 50%;
+	width: 45%;
 	float: left;
+	margin-left: 2em;
 }
 .block-in-currency {
-	width: 50%;
+	width: 45%;
 	float: right;
+	margin-right: 2em;
 }
 
 .entry-field {
@@ -56,7 +60,7 @@ input[type="text"]::placeholder { color: #fafafa; opacity: .6}
 	padding: 10px;
 	color: #FFF;
 	outline: none;
-	width: 70%;
+	width: 71.5%;
 	font-size: 2em;
 }
 
@@ -66,21 +70,25 @@ input[type="text"]::placeholder { color: #fafafa; opacity: .6}
 	border-radius: 10px;
 	padding: 10px;
 	margin-top: 1em;
-	margin-left: .8em;
-	color: #FFF;
-background-image: linear-gradient(315deg, #f6d327 0%, #de4daa 74%);
+	margin-left: .4em;
+	margin-right: .4em;
+	color: #fff;
   	background-size: 300% auto;
   	box-shadow: 0 0 20px rgba(0,0,0,.1);
 	outline: none;
-	width: 10em;
-	font-size: 1.9em;
+	width: 35%;
+	font-size: 200%;
 	font-weight: 300;
-	transition-duration: .4s;
+	transition-duration: .3s;
 	opacity: .7;
 	cursor: pointer;
 }
+.btn-out {
+	background-image: linear-gradient(-40deg, #FFB50B 0%, #B721FF 100%);
+}
+
 .buttons:hover {
-	transition-duration: .4s;
+	transition-duration: .3s;
 	background-position: right; 
 }
 

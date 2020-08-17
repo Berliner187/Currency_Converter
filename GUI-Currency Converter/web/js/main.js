@@ -46,6 +46,22 @@ document.getElementById("rArmenianDram").onclick = async function display_Armeni
     document.getElementById("info_ruble").innerHTML = out  + " ₽";
 };
 
+document.getElementById("rCanadianDollar").onclick = async function display_CanadianDollar() {
+    let userNum = document.getElementById("rNumber").value;
+    let num = await eel.check_CanadianDollar()();
+    let out = userNum * num
+
+    document.getElementById("info_ruble").innerHTML = out  + " ₽";
+};
+
+document.getElementById("rSwissFrank").onclick = async function display_SwissFrank() {
+    let userNum = document.getElementById("rNumber").value;
+    let num = await eel.check_SwissFrank()();
+    let out = userNum * num
+
+    document.getElementById("info_ruble").innerHTML = out  + " ₽";
+};
+
 
 
 document.getElementById("cDollar").onclick = async function display_Dollar() {
@@ -94,4 +110,20 @@ document.getElementById("cArmenianDram").onclick = async function display_Armeni
     let out = userNum / num
 
     document.getElementById("info_currency").innerHTML = out  + " ֏";
+};
+
+document.getElementById("cCanadianDollar").onclick = async function display_CanadianDollar() {
+    let userNum = document.getElementById("cNumber").value;
+    let num = await eel.check_CanadianDollar()();
+    let out = userNum / num
+
+    document.getElementById("info_currency").innerHTML = out  + " $";
+};
+
+document.getElementById("cSwissFrank").onclick = async function display_SwissFrank() {
+    let userNum = document.getElementById("cNumber").value;
+    let num = await eel.check_SwissFrank()();
+    let out = userNum / num
+
+    document.getElementById("info_currency").innerHTML = out  + " SwF";
 };
