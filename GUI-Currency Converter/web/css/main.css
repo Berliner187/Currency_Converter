@@ -17,6 +17,7 @@ h1 {
 	font-family: 'Mon Amour One, Medium';
 	font-size: 5em;
 	color: #FFF;
+	margin-top: 0;
 	text-align: center;
 	background-color: #ffcb3b;
     background-image: linear-gradient(147deg, #ffcb3b 0%, #ff9e25 74%);
@@ -38,7 +39,8 @@ input[type="text"]::placeholder { color: #fafafa; opacity: .6}
 .brd {
 	border: .3em double black; 
     padding: 10px;
-    border-radius: 2em
+    border-radius: 2em;
+    box-shadow: 1em 1em 1em .6em
 }
 .block-in-ruble {
 	width: 45%;
