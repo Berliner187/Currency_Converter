@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Currency Converter</title>
+        <link rel="icon" type="img/png" href="">
+		<script type="text/javascript" src="/eel.js"></script>
+		<link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+
+    <div class="main-block" align="center">
+        <h1>Currency Converter</h1>
+
+        <p class="p-out" id="info">Число</p>
+        <input class="entry-field" type="text" id="number" placeholder="Число для конвертирования... ">
+
+		<button id="Dollar" class="buttons">Доллар</button>
+        <button id="Euro" class="buttons">Евро</button>
+        <button id="Pound" class="buttons">Фунт</button>
+        <button id="Hryvnia" class="buttons">Гривна</button>
+        <button id="Yuan" class="buttons">Юань</button>
+        <button id="ArmenianDram" class="buttons">Армянский драм</button>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById("Dollar").onclick = async function display_Dollar() {
+            let userNum = document.getElementById("number").value;
+            let num = await eel.check_Dollar()();
+            let out = userNum * num
+
+            document.getElementById("info").innerHTML = out + " ₽";
+        };
+    </script>
+
+    <script type="text/javascript">
+        document.getElementById("Euro").onclick = async function display_Euro() {
+            let userNum = document.getElementById("number").value;
+            let num = await eel.check_Euro()();
+            let out = userNum * num
+
+            document.getElementById("info").innerHTML = out + " ₽";
+        };
+    </script>
+
+    <script type="text/javascript">
+        document.getElementById("Pound").onclick = async function display_Pound() {
+            let userNum = document.getElementById("number").value;
+            let num = await eel.check_Pound()();
+            let out = userNum * num
+
+            document.getElementById("info").innerHTML = out + " ₽";
+        };
+    </script>
+
+    <script type="text/javascript">
+        document.getElementById("Hryvnia").onclick = async function display_Hryvnia() {
+            let userNum = document.getElementById("number").value;
+            let num = await eel.check_Hryvnia()();
+            let out = userNum * num
+
+            document.getElementById("info").innerHTML = out + " ₽";
+        };
+    </script>
+
+    <script type="text/javascript">
+        document.getElementById("Yuan").onclick = async function display_Yuan() {
+            let userNum = document.getElementById("number").value;
+            let num = await eel.check_Yuan()();
+            let out = userNum * num
+
+            document.getElementById("info").innerHTML = out + " ₽";
+        };
+    </script>
+
+    <script type="text/javascript">
+        document.getElementById("ArmenianDram").onclick = async function display_ArmenianDram() {
+            let userNum = document.getElementById("number").value;
+            let num = await eel.check_ArmenianDram()();
+            let out = userNum * num
+
+            document.getElementById("info").innerHTML = out  + " ₽";
+        };
+    </script>
+
+    </body>
+</html>
