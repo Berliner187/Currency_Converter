@@ -1,0 +1,92 @@
+@font-face {
+		font-family: 'Mon Amour One, Medium';
+		src: url(../fonts/mon-amour-one-medium.ttf)
+	}
+@font-face {
+        font-family: 'SFNS Display';
+        src: url(../fonts/SFNS.ttf);
+}
+* {
+	font-family: 'SFNS Display'
+}
+body {
+background: #41295a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+background-size: 1920px 1080px
+}
+h1 {
+	font-family: 'Mon Amour One, Medium';
+	font-size: 4em;
+	color: #FFF;
+	text-align: center;
+	background: #ff7e5f;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #feb47b, #ff7e5f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #feb47b, #ff7e5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+p {
+	color: #FFF;
+	font-size: 3em
+}
+input[type="text"]::placeholder { color: #fafafa; opacity: .6} 
+
+.main-block {
+	display: inline;
+}
+
+.block-in-ruble {
+	width: 50%;
+	float: left;
+}
+.block-in-currency {
+	width: 50%;
+	float: right;
+}
+
+.entry-field {
+	display: block;
+	border: none;
+	margin-top: 1em;
+	background: rgba(255, 255, 255, .5);
+	border-radius: 10px;
+	padding: 10px;
+	color: #FFF;
+	outline: none;
+	width: 70%;
+	font-size: 2em;
+}
+
+.buttons {
+	display: inline;
+	border: none;
+	border-radius: 10px;
+	padding: 10px;
+	margin-top: 1em;
+	margin-left: .8em;
+	color: #FFF;
+background-image: linear-gradient(315deg, #f6d327 0%, #de4daa 74%);
+  	background-size: 300% auto;
+  	box-shadow: 0 0 20px rgba(0,0,0,.1);
+	outline: none;
+	width: 10em;
+	font-size: 1.9em;
+	font-weight: 300;
+	transition-duration: .4s;
+	opacity: .7;
+	cursor: pointer;
+}
+.buttons:hover {
+	transition-duration: .4s;
+	background-position: right; 
+}
+
+.span-out {
+	font-size: 2em;
+	color: #FFF;
+	margin-top: 0;
+	margin-bottom: 0;
+}

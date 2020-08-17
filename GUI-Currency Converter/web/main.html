@@ -3,85 +3,42 @@
     <head>
         <meta charset="UTF-8">
         <title>Currency Converter</title>
-        <link rel="icon" type="img/png" href="">
+        <link rel="icon" type="img/png" href="favicon.png">
 		<script type="text/javascript" src="/eel.js"></script>
-		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
     <body>
 
-    <div class="main-block" align="center">
+    <div class="main-block">
         <h1>Currency Converter</h1>
 
-        <p class="p-out" id="info">Число</p>
-        <input class="entry-field" type="text" id="number" placeholder="Число для конвертирования... ">
+        <div class="block-in-ruble" align="center">
+            <p>Convert to rubles</p>
+            <span class="span-out" id="info_ruble">---</span>
+            <input class="entry-field" type="text" id="rNumber" placeholder="Number in currency... ">
+            <button id="rDollar" class="buttons">Dollar</button>
+            <button id="rEuro" class="buttons">Euro</button>
+            <button id="rPound" class="buttons">Pound</button>
+            <button id="rHryvnia" class="buttons">Hryvnia</button>
+            <button id="rYuan" class="buttons">Yuan</button>
+            <button id="rArmenianDram" class="buttons">Armenian Dram</button>
+        </div>
 
-		<button id="Dollar" class="buttons">Доллар</button>
-        <button id="Euro" class="buttons">Евро</button>
-        <button id="Pound" class="buttons">Фунт</button>
-        <button id="Hryvnia" class="buttons">Гривна</button>
-        <button id="Yuan" class="buttons">Юань</button>
-        <button id="ArmenianDram" class="buttons">Армянский драм</button>
+        <div class="block-in-currency" align="center">
+            <p>Convert to currency</p>
+            <span class="span-out" id="info_currency">---</span>
+            <input class="entry-field" type="text" id="cNumber" placeholder="Number in rubles... ">
+    		<button id="cDollar" class="buttons">Dollar</button>
+            <button id="cEuro" class="buttons">Euro</button>
+            <button id="cPound" class="buttons">Pound</button>
+            <button id="cHryvnia" class="buttons">Hryvnia</button>
+            <button id="cYuan" class="buttons">Yuan</button>
+            <button id="cArmenianDram" class="buttons">Armenian Dram</button>
+        </div>
+
     </div>
 
-    <script type="text/javascript">
-        document.getElementById("Dollar").onclick = async function display_Dollar() {
-            let userNum = document.getElementById("number").value;
-            let num = await eel.check_Dollar()();
-            let out = userNum * num
-
-            document.getElementById("info").innerHTML = out + " ₽";
-        };
-    </script>
-
-    <script type="text/javascript">
-        document.getElementById("Euro").onclick = async function display_Euro() {
-            let userNum = document.getElementById("number").value;
-            let num = await eel.check_Euro()();
-            let out = userNum * num
-
-            document.getElementById("info").innerHTML = out + " ₽";
-        };
-    </script>
-
-    <script type="text/javascript">
-        document.getElementById("Pound").onclick = async function display_Pound() {
-            let userNum = document.getElementById("number").value;
-            let num = await eel.check_Pound()();
-            let out = userNum * num
-
-            document.getElementById("info").innerHTML = out + " ₽";
-        };
-    </script>
-
-    <script type="text/javascript">
-        document.getElementById("Hryvnia").onclick = async function display_Hryvnia() {
-            let userNum = document.getElementById("number").value;
-            let num = await eel.check_Hryvnia()();
-            let out = userNum * num
-
-            document.getElementById("info").innerHTML = out + " ₽";
-        };
-    </script>
-
-    <script type="text/javascript">
-        document.getElementById("Yuan").onclick = async function display_Yuan() {
-            let userNum = document.getElementById("number").value;
-            let num = await eel.check_Yuan()();
-            let out = userNum * num
-
-            document.getElementById("info").innerHTML = out + " ₽";
-        };
-    </script>
-
-    <script type="text/javascript">
-        document.getElementById("ArmenianDram").onclick = async function display_ArmenianDram() {
-            let userNum = document.getElementById("number").value;
-            let num = await eel.check_ArmenianDram()();
-            let out = userNum * num
-
-            document.getElementById("info").innerHTML = out  + " ₽";
-        };
-    </script>
+    <script type="text/javascript" src="js/main.js"></script>
 
     </body>
 </html>
