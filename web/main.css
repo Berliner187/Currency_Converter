@@ -1,0 +1,53 @@
+body {
+background-image: linear-gradient(to right, #29323c 40%, #222 100%);
+}
+h1 {
+	font-family: 'SFNS Display';
+	font-size: 3em;
+	color: #FFF
+}
+input[type="text"]::placeholder { color: #fafafa; } 
+
+.entry-field {
+	display: block;
+	border: none;
+	margin-top: 5em;
+	background: rgba(255, 255, 255, .5);
+	border-radius: 10px;
+	padding: 10px;
+	color: #FFF;
+	outline: none;
+	width: 70%;
+	font-size: 2em;
+	font-weight: 300;
+}
+
+.buttons {
+	display: inline;
+	border: none;
+	border-radius: 10px;
+	padding: 10px;
+	margin-top: 1em;
+	margin-left: .8em;
+	color: #FFF;
+	background-image: linear-gradient(20deg, #4158D0 0%, #C850C0 46%, #ffb952 100%);
+	outline: none;
+	width: 10em;
+	font-size: 1.9em;
+	font-weight: 300;
+	transition-duration: .4s;
+	opacity: .7;
+	cursor: pointer;
+}
+.buttons:hover {
+	transition-duration: 1s;
+	background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+	background-position: right center; 
+}
+.p-out {
+	font-size: 2em;
+	color: #FFF;
+	margin-top: 0;
+	margin-bottom: 0
+}

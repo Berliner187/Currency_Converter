@@ -1,0 +1,105 @@
+@font-face {
+		font-family: 'Mon Amour One, Medium';
+		src: url(../fonts/mon-amour-one-medium.ttf)
+	}
+@font-face {
+        font-family: 'SFNS Display';
+        src: url(../fonts/SFNS.ttf);
+}
+* {
+	font-family: 'SFNS Display'
+}
+body {
+	background-color: #55595f;
+ 	background-size: 1920px 1080px
+}
+h1 {
+	font-family: 'Mon Amour One, Medium';
+	font-size: 5em;
+	color: #FFF;
+	margin-top: 0;
+	text-align: center;
+	background-color: #ffcb3b;
+    background-image: linear-gradient(147deg, #ffcb3b 0%, #ff9e25 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+p {
+	color: #FFF;
+	font-size: 3em
+}
+input[type="text"]::placeholder { color: #fafafa; opacity: .6} 
+
+.main-block {
+	display: inline;
+	height: 100%;
+	width: 100%
+}
+
+.brd {
+	border: .1vw double black; 
+    padding: 5px;
+    border-radius: 2em;
+    box-shadow: 1em 1em 1em .7em
+}
+.block-in-ruble {
+	width: 45%;
+	float: left;
+	margin-left: 2em;
+}
+.block-in-currency {
+	width: 45%;
+	float: right;
+	margin-right: 2em;
+}
+
+.entry-field {
+	display: block;
+	border: none;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background: rgba(255, 255, 255, .5);
+	border-radius: 10px;
+	padding: 10px;
+	color: #FFF;
+	outline: none;
+	width: 71.5%;
+	font-size: 2em;
+}
+
+.buttons {
+	display: inline;
+	border: none;
+	border-radius: 10px;
+	padding: 10px;
+	margin-top: .5em;
+	margin-bottom: .5em;
+	margin-left: .4em;
+	margin-right: .4em;
+	color: #fff;
+  	background-size: 300% auto;
+  	box-shadow: .1em .1em .3em .3em rgba(0,0,0,.8);
+	outline: none;
+	width: 35%;
+	font-size: 200%;
+	font-weight: 300;
+	transition-duration: .3s;
+	opacity: .7;
+	cursor: pointer;
+}
+.btn-out {
+	background-image: linear-gradient(-40deg, #FFB50B 0%, #B721FF 100%);
+}
+
+.buttons:hover {
+	transition-duration: .3s;
+	background-position: right; 
+	box-shadow: .1em .1em .4em .4em rgba(0,0,0,.8);
+}
+
+.span-out {
+	font-size: 2em;
+	color: #FFF;
+	margin-top: 0;
+	margin-bottom: 0;
+}
