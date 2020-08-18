@@ -37,10 +37,10 @@ input[type="text"]::placeholder { color: #fafafa; opacity: .6}
 }
 
 .brd {
-	border: .3em double black; 
-    padding: 10px;
+	border: .1vw double black; 
+    padding: 5px;
     border-radius: 2em;
-    box-shadow: 1em 1em 1em .6em
+    box-shadow: 1em 1em 1em .7em
 }
 .block-in-ruble {
 	width: 45%;
@@ -57,6 +57,7 @@ input[type="text"]::placeholder { color: #fafafa; opacity: .6}
 	display: block;
 	border: none;
 	margin-top: 1em;
+	margin-bottom: 1em;
 	background: rgba(255, 255, 255, .5);
 	border-radius: 10px;
 	padding: 10px;
@@ -71,12 +72,13 @@ input[type="text"]::placeholder { color: #fafafa; opacity: .6}
 	border: none;
 	border-radius: 10px;
 	padding: 10px;
-	margin-top: 1em;
+	margin-top: .5em;
+	margin-bottom: .5em;
 	margin-left: .4em;
 	margin-right: .4em;
 	color: #fff;
   	background-size: 300% auto;
-  	box-shadow: 0 0 20px rgba(0,0,0,.1);
+  	box-shadow: .1em .1em .3em .3em rgba(0,0,0,.8);
 	outline: none;
 	width: 35%;
 	font-size: 200%;
@@ -92,6 +94,7 @@ input[type="text"]::placeholder { color: #fafafa; opacity: .6}
 .buttons:hover {
 	transition-duration: .3s;
 	background-position: right; 
+	box-shadow: 0 0 .4em .4em rgba(0,0,0,.8);
 }
 
 .span-out {
