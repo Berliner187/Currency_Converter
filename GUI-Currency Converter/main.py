@@ -87,4 +87,4 @@ def check_SwissFrank():
 
 
 
-eel.start("main.html", size=(1000, 700))
+eel.start("main.html", size=(1400, 1000))
