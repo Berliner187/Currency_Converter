@@ -94,7 +94,7 @@ input[type="text"]::placeholder { color: #fafafa; opacity: .6}
 .buttons:hover {
 	transition-duration: .3s;
 	background-position: right; 
-	box-shadow: 0 0 .4em .4em rgba(0,0,0,.8);
+	box-shadow: .1em .1em .4em .4em rgba(0,0,0,.8);
 }
 
 .span-out {
