@@ -59,13 +59,23 @@ input[type="text"]::placeholder { color: #fafafa; opacity: .6}
 	margin-top: 1em;
 	margin-bottom: 1em;
 	background: rgba(255, 255, 255, .5);
+	box-shadow: .1em .1em .3em .3em rgba(0,0,0,.8);
 	border-radius: 10px;
 	padding: 10px;
 	color: #FFF;
 	outline: none;
 	width: 71.5%;
 	font-size: 2em;
+	transition-duration: .5s
 }
+.entry-field:focus {
+	box-shadow: .1em .1em .5em .5em rgba(0,0,0,.8);
+	transition-duration: .5s
+}
+.entry-field:hover {
+	box-shadow: .1em .1em .7em .7em rgba(0,0,0,.8);
+}
+
 
 .buttons {
 	display: inline;
