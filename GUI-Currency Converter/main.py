@@ -1,10 +1,9 @@
-#!/usr/bin/env python3
 import eel
 import requests
 from bs4 import BeautifulSoup
 
 
-eel.init("web")
+eel.init('web')
 
 headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}
 
@@ -84,7 +83,4 @@ def check_SwissFrank():
     return out
 
 
-
-
-
-eel.start("main.html", size=(1400, 1000))
+eel.start("main.html", size=(1000, 700))
