@@ -13,6 +13,9 @@ body {
 	background-color: #55595f;
  	background-size: 1920px 1080px
 }
+h1, h2, p, button {
+	text-shadow: .2em .2em .25em black
+}
 h1 {
 	font-family: 'Mon Amour One, Medium';
 	font-size: 5em;
@@ -28,7 +31,7 @@ p {
 	color: #FFF;
 	font-size: 3em
 }
-input[type="text"]::placeholder { color: #fafafa; opacity: .6} 
+input[type="text"]::placeholder { color: #fafafa; opacity: .6; } 
 
 .main-block {
 	display: inline;
