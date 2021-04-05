@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
 import eel
 import requests
 from bs4 import BeautifulSoup
 
 
-eel.init('web')
+eel.init("web")
 
 headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}
 
@@ -81,6 +82,9 @@ def check_SwissFrank():
     convert_eu = soup.findAll("div", {"class": "currency-table__large-text"})
     out = float(convert_eu[0].text.replace(",", "."))
     return out
+
+
+
 
 
 eel.start("main.html", size=(1000, 700))
